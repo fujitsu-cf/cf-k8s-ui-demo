@@ -1,0 +1,54 @@
+<md-bottom-sheet class="md-list md-has-header">
+
+    <md-subheader>
+        Add new user
+    </md-subheader>
+
+    <md-content layout-gt-sm="row" layout-padding>
+
+        <div>
+            <md-input-container>
+                <label>Name</label>
+                <input ng-model="$ctrl.user.name" required type="text" >
+            </md-input-container>
+
+            <md-input-container>
+                <label>Surname</label>
+                <input ng-model="$ctrl.user.surname" required type="text" >
+            </md-input-container>
+        </div>
+    </md-content>
+
+    <md-content layout-gt-sm="row" layout-padding>
+        <div>
+            {{items[0].name}}
+            <md-input-container>
+                <label>Age</label>
+                <input ng-model="$ctrl.user.age" required type="number" >
+            </md-input-container>
+
+            <md-input-container>
+                <label>Email</label>
+                <input ng-model="$ctrl.user.email" type="email" required >
+            </md-input-container>
+        </div>
+    </md-content>
+
+
+    <md-content layout-gt-sm="row" layout-padding>
+        <md-radio-group ng-model="$ctrl.selectedItem" layout="row">
+            <md-radio-button ng-repeat="it in $ctrl.items"
+                             ng-value="it"
+                             aria-label="{{it.title}}">
+                <md-icon md-svg-icon="{{it.id}}" class="avatar"></md-icon>
+            </md-radio-button>
+        </md-radio-group>
+    </md-content>
+
+    <md-content layout-gt-sm="row" layout-padding>
+
+        <md-button class="md-raised md-primary" ng-click="$ctrl.save(user)">Save</md-button>
+        <md-button class="md-raised md-primary" ng-click="$ctrl.cancel($event)">Cancel</md-button>
+    </md-content>
+
+</md-bottom-sheet>
