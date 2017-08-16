@@ -25,4 +25,4 @@ export default angular.module( 'starter-app', [ 'ngMaterial', Users.name ] )
       .accentPalette('red');
   })
   .controller('AppController', AppController)
-  .constant('server', 'http://127.0.0.1:9999');
+  .constant('server', 'http://cf-test-postgres.cf.svc.cluster.local');

@@ -1,0 +1,7 @@
+---
+applications:
+- name: cf-k8s-ui-demo
+  memory: 512M
+  instances: 1
+
+
